@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COLLATZ CONJECTURE</title>
+</head>
+<body>
+	<h1>WHAT IS COLLATZ CONJECTURE?</h1>
+
+  <div>
+		<h4>CLICK SUBMIT FIRST AND THEN THE LINK</h4>
+    <form  method="POST">
+      <label>ENTER AN INTEGER</label>
+      {{form.as_p}}
+      {% csrf_token %}
+     <input type="submit"  value="SUBMIT">
+	   </form>
+		 <div>
+	    <p><a href="http://127.0.0.1:8000/collatz/output">CLICK HERE TO SEE THE SOLUTION</a></p>
+	   </div>
+  </div>
+	<div>
+		<h2>EXAMPLES(FIRST 5 ENTRIES FROM DATABASE):-</h2>
+		<ol>
+				{% for obj in obj_list %}
+
+					<li>ENTRY {{obj.id}}-</li>
+							<ul>
+								<li>NUMBER:{{obj.number}}</li>
+								<li>OUTPUT_LIST:{{obj.output_list}}</li>
+							</ul>
+
+				{% endfor %}
+				</ol>
+			</div>
+
+</body>
+</html>

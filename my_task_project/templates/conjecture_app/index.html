@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+  <meta charset="utf-8"/>
+	<title>COLLATZ-INPUT</title>
+
+</head>
+<body>
+  <h1>THE COLLATZ CONJECTURE</h1>
+  <img src="{% static "images/collatz2.jpg" %}" />
+  <h2>BRIEF HISTORY</h2>
+  <p>
+    {{collatz_conjec}}
+  </p>
+  <div>
+    <a href="http://127.0.0.1:8000/collatz">CLICK HERE TO TRY</a>
+  </div>
+</body>
+</html>
